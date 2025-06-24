@@ -42,7 +42,7 @@ with open('time_tracker.csv', 'a', newline='') as file:
     writer = csv.writer(file, delimiter=',')
     if lastDateEntry != str(date) and lastDateEntry != "":
         writer.writerow('')
-    writer.writerow([date, taskName, s_time, e_time, timeSecFormat])
+    writer.writerow([date, taskName, s_time, e_time, timeSec, timeSecFormat])
 
 # User message
 print(f"You have worked on task {taskName} for {timeSecFormat}.")
